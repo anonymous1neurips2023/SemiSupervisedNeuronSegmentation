@@ -1,1 +1,1 @@
-# SemiSupervisedNeuronSegmentation
+# Semi-Supervised Neuron Segmentation
