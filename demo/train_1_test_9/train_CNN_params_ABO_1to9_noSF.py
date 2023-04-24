@@ -98,12 +98,10 @@ if __name__ == '__main__':
     # %% set the range of post-processing hyper-parameters to be optimized in
     # minimum area of a neuron (unit: pixels in ABO videos). must be in ascend order
     list_minArea = list(range(90,135,5)) 
-    #list_minArea = [115] 
 
     # average area of a typical neuron (unit: pixels in ABO videos)
     list_avgArea = [177] 
     # uint8 threshould of probablity map (uint8 variable, = float probablity * 256 - 1)
-    list_thresh_pmap = list(range(165,210,5))
     list_thresh_pmap = [100]
     # threshold to binarize the neuron masks. For each mask, 
     # values higher than "thresh_mask" times the maximum value of the mask are set to one.
@@ -113,11 +111,9 @@ if __name__ == '__main__':
     thresh_COM0 = 2
     # maximum COM distance of two masks to be considered the same neuron (unit: pixels in ABO videos)
     list_thresh_COM = list(np.arange(4, 9, 1)) 
-   # list_thresh_COM = [6] 
     # minimum IoU of two masks to be considered the same neuron
     list_thresh_IOU = [0.5] 
     # minimum consecutive number of frames of active neurons
-    list_cons = list(range(1, 8, 1)) 
     list_cons = [1]
 
     # adjust the units of the hyper-parameters to pixels in the test videos according to relative magnification
@@ -136,15 +132,15 @@ if __name__ == '__main__':
 
 
     # pre-processing for training
-    # for Exp_ID in list_Exp_ID: #
-    #    #%% Pre-process video
-    #     video_input, _ = preprocess_video(dir_video, Exp_ID, Params, dir_network_input, \
-    #         useSF=useSF, useTF=useTF, useSNR=useSNR, prealloc=prealloc) #
+     for Exp_ID in list_Exp_ID: #
+        #%% Pre-process video
+         video_input, _ = preprocess_video(dir_video, Exp_ID, Params, dir_network_input, \
+             useSF=useSF, useTF=useTF, useSNR=useSNR, prealloc=prealloc) #
 
-    #     # %% Determine active neurons in all frames using FISSA
-    #     file_mask = dir_GTMasks + Exp_ID + '.mat' # foldr to save the temporal masks
-    #     generate_masks(video_input, file_mask, list_thred_ratio, dir_parent, Exp_ID)
-    #     del video_input
+         # %% Determine active neurons in all frames using FISSA
+         file_mask = dir_GTMasks + Exp_ID + '.mat' # foldr to save the temporal masks
+         generate_masks(video_input, file_mask, list_thred_ratio, dir_parent, Exp_ID)
+         del video_input
     
     #%% CNN training
     mincons = np.ones((nvideo),dtype = int) 
@@ -164,7 +160,7 @@ if __name__ == '__main__':
 
         results = train_CNN(dir_network_input, dir_mask, dir_GTMasks, dir_selected, file_CNN, list_Exp_ID_train, list_Exp_ID_val, \
             BATCH_SIZE, NO_OF_EPOCHS, num_train_per, num_total, (rowspad, colspad), Params_loss)
-        # mincons[CV] = mincon
+       
         # save training and validation loss after each eopch
         f = h5py.File(training_output_path+"training_output_CV{}.h5".format(CV), "w")
         f.create_dataset("loss", data=results.history['loss'])
@@ -174,11 +170,7 @@ if __name__ == '__main__':
             f.create_dataset("val_dice_loss", data=results.history['val_dice_loss'])
         f.close()
     
-    f2 = h5py.File(os.path.join(dir_selected,"mincons.h5"), "w")
-    f2.create_dataset("mincon", data = mincons)
-    f2.close()
     # %% parameter optimization
-#    mincons = [5,5,5,5,5,5,5,1,1,1]
     parameter_optimization_cross_validation(cross_validation, list_Exp_ID, mincons, Params_set, \
         (rows, cols), dir_network_input, dir_selected, weights_path, dir_GTMasks, dir_temp, dir_output, \
         batch_size_eval, useWT=False, useMP=True, load_exist=load_exist)
