@@ -28,6 +28,7 @@ CUDA compatible GPU, Anaconda
 ### Run Demo
 
 6) In Anaconda Prompt, 
+
         cd segmentation_directory
         cd demo
         cd train_1_test_9
