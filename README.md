@@ -37,7 +37,7 @@ CUDA compatible GPU, Anaconda
 
 ### Pipeline Output
 
-SNR video can be found in `\demo\datanoSF\noSF\network_input`
+SNR videos can be found in `\demo\datanoSF\noSF\network_input`
 
 10 frames of input can be found in `\demo\datanoSF\noSF\SelectedMasks\*_train.h5`
 
