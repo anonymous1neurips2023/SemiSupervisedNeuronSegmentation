@@ -3,7 +3,7 @@
 Requirements: 
 CUDA compatible GPU, Anaconda
 
-## Demo:
+## Demo on ABO 175 Data:
 
 ### Install Pipeline
 
@@ -21,6 +21,8 @@ CUDA compatible GPU, Anaconda
 
 ### Download Data
 
+## Allen Brain Observatory (ABO) dataset
+The ABO dataset is available in [Allen Institute](https://github.com/AllenInstitute/AllenSDK/wiki/Use-the-Allen-Brain-Observatory-%E2%80%93-Visual-Coding-on-AWS). You may need a Amazon AWS account to download them. We used 10 videos from 175 um layer, {'501271265', '501704220', '501836392', '502115959', '502205092', '504637623', '510514474', '510517131', '540684467', '545446482'}. We used the manual labels [175 um layer](https://github.com/soltanianzadeh/STNeuroNet/tree/master/Markings/ABO/Layer175/FinalGT) created by Soltanian-Zadeh et al. We also used the code [create_h5_video_ABO.m](utils/create_h5_video_ABO.m) modified from the same STNeuroNet repository to crop each video to the first 20% durations and the center parts, so that the video sizes are changed from 512 x 512 x ~115,000 to 487 x 487 x ~23,000. Set the folders correctly, and run the code. 
 
 
 
