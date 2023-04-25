@@ -35,6 +35,12 @@ CUDA compatible GPU, Anaconda
         conda activate SSLseg
         runABO.bat
 
+### Pipeline Output
+
+7) Output Masks can be found in 
+
+
+
 
 
 
