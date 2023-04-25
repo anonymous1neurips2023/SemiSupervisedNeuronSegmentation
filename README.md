@@ -3,6 +3,8 @@
 Requirements: 
 CUDA compatible GPU, Anaconda
 
+We adapted the code from <https://github.com/YijunBao/Shallow-UNet-Neuron-Segmentation_SUNS>, see that page for more details on incorporating your own data into the pipeline
+
 ## Demo on ABO 175 Data:
 
 ### Install Pipeline
