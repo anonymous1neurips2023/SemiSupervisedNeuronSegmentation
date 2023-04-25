@@ -33,7 +33,7 @@ CUDA compatible GPU, Anaconda
         cd demo
         cd train_1_test_9
         conda activate SSLseg
-        .\runABO.bat
+        runABO.bat
 
 
 
