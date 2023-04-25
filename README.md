@@ -37,7 +37,15 @@ CUDA compatible GPU, Anaconda
 
 ### Pipeline Output
 
-7) Output Masks can be found in 
+SNR video can be found in `\demo\datanoSF\noSF\network_input`
+
+10 frames of input can be found in `\demo\datanoSF\noSF\SelectedMasks\*_train.h5`
+
+Model weights can be found in `\demo\datanoSF\noSF\Weights 1to9`
+
+Output Masks, hyperparameters, and F1/Recall/Precision can be found in `\demo\datanoSF\noSF\output_masks 1to9`
+
+
 
 
 
