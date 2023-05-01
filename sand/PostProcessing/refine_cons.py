@@ -2,7 +2,7 @@ import numpy as np
 from scipy import sparse
 import time
 
-from suns.PostProcessing.evaluate import GetPerformance_Jaccard_2
+from sand.PostProcessing.evaluate import GetPerformance_Jaccard_2
 
 
 def refine_seperate(masks_final_2, times_final, cons=1, thresh_mask=0.5, ThreshJ=0.5):
