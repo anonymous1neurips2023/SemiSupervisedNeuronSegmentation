@@ -13,9 +13,9 @@ sys.path.insert(1, '..\\..') # the path containing "suns" folder
 os.environ['KERAS_BACKEND'] = 'tensorflow'
 # os.environ['CUDA_VISIBLE_DEVICES'] = '0' # Set which GPU to use. '-1' uses only CPU.
 
-from suns.PreProcessing.preprocessing_functions import preprocess_video
-from suns.PreProcessing.generate_masks import generate_masks
-from suns.train_CNN_params import train_CNN, parameter_optimization_cross_validation, train_CNN_oldsuns, parameter_optimization_cross_validation_oldsuns
+from sand.PreProcessing.preprocessing_functions import preprocess_video
+from sand.PreProcessing.generate_masks import generate_masks
+from sand.train_CNN_params import train_CNN, parameter_optimization_cross_validation, train_CNN_oldsuns, parameter_optimization_cross_validation_oldsuns
 
 
 # %%
