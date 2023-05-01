@@ -7,9 +7,9 @@ import time
 import multiprocessing as mp
 import h5py
 import matplotlib.pyplot as plt
-from suns.PostProcessing.seperate_neurons import watershed_neurons, separate_neuron
-from suns.PostProcessing.combine import segs_results, unique_neurons2_simp, group_neurons, piece_neurons_IOU, piece_neurons_consume
-from suns.PostProcessing.refine_cons import refine_seperate, refine_seperate_multi
+from sand.PostProcessing.seperate_neurons import watershed_neurons, separate_neuron
+from sand.PostProcessing.combine import segs_results, unique_neurons2_simp, group_neurons, piece_neurons_IOU, piece_neurons_consume
+from sand.PostProcessing.refine_cons import refine_seperate, refine_seperate_multi
 
 
 # %%
