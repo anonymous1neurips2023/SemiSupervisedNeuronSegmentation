@@ -12,7 +12,7 @@ from scipy.io import loadmat
 import sys
 from cpuinfo import get_cpu_info
 
-from suns.PreProcessing.par1 import fastexp, fastmask, fastlog, \
+from sand.PreProcessing.par1 import fastexp, fastmask, fastlog, \
     fastconv, fastquant, fastnormf, fastnormback, fastmediansubtract
 
 
