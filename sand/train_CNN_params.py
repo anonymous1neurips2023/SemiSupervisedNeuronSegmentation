@@ -14,13 +14,12 @@ import matplotlib.pyplot as plt
 from scipy.stats import kurtosis
 os.environ['KERAS_BACKEND'] = 'tensorflow'
 # os.environ['CUDA_VISIBLE_DEVICES'] = '0' # Set which GPU to use. '-1' uses only CPU.
-from suns.PostProcessing.par3 import fastthreshold
-from suns.Network.data_gen import data_gen
-from suns.Network.shallow_unet import get_shallow_unet, get_shallow_unet_mutual, get_shallow_unet_2, get_shallow_unet_3
-from suns.Network.vae import trainVAE
-from suns.Network.par2 import fastuint
-from suns.PostProcessing.complete_post import parameter_optimization, complete_segment
-from suns.PostProcessing.evaluate import GetOverlappingNeurons, GetPerformance_Jaccard_2
+from sand.PostProcessing.par3 import fastthreshold
+from sand.Network.data_gen import data_gen
+from sand.Network.shallow_unet import get_shallow_unet, get_shallow_unet_mutual, get_shallow_unet_2, get_shallow_unet_3
+from sand.Network.par2 import fastuint
+from sand.PostProcessing.complete_post import parameter_optimization, complete_segment
+from sand.PostProcessing.evaluate import GetOverlappingNeurons, GetPerformance_Jaccard_2
 
 def getMinLength(arr, n):
  
