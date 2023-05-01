@@ -20,8 +20,8 @@ os.environ['KERAS_BACKEND'] = 'tensorflow'
 # os.environ['CUDA_VISIBLE_DEVICES'] = '0' # Set which GPU to use. '-1' uses only CPU.
 from suns.train_CNN_params import parameter_optimization_cross_validation
 
-from suns.PostProcessing.evaluate import GetPerformance_Jaccard_2, get_all_traces
-from suns.run_suns import suns_batch
+from sand.PostProcessing.evaluate import GetPerformance_Jaccard_2, get_all_traces
+from sand.run_suns import suns_batch
 
 # %%
 if __name__ == '__main__':
