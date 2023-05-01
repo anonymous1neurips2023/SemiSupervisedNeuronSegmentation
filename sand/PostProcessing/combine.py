@@ -2,7 +2,7 @@ import numpy as np
 from scipy import sparse
 from sklearn.metrics import pairwise_distances
 
-from suns.PostProcessing.par3 import fastCOMdistance
+from sand.PostProcessing.par3 import fastCOMdistance
 
 
 def segs_results(segs: list):
