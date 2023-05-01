@@ -21,7 +21,7 @@ os.environ['KERAS_BACKEND'] = 'tensorflow'
 from suns.train_CNN_params import parameter_optimization_cross_validation
 
 from sand.PostProcessing.evaluate import GetPerformance_Jaccard_2, get_all_traces
-from sand.run_suns import suns_batch
+from sand.run_sand import suns_batch
 
 # %%
 if __name__ == '__main__':
