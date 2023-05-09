@@ -1,7 +1,11 @@
 # Semi-Supervised Deep Learning for Neuron Segmentation with Fewer Ground Truth Labels
 
 Requirements: 
-CUDA compatible GPU, Anaconda
+Memory: ~6x file size of the raw video if the the raw video is in uint16 format. ~3x file size of the raw video if the the raw video is in float32 format.
+
+A CUDA compatible GPU is preferred.
+
+Anaconda
 
 We adapted the code from <https://github.com/YijunBao/Shallow-UNet-Neuron-Segmentation_SUNS>
 
